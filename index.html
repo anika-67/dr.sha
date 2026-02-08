@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dr. Shahriar Islam | Medicine Specialist</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+:root{--primary:#0b3c5d;--secondary:#1d84b5}
+*{box-sizing:border-box}
+body{margin:0;font-family:'Poppins',sans-serif;overflow-x:hidden}
+
+/* NAVBAR */
+nav{
+position:fixed;top:0;width:100%;background:#fff;
+padding:14px 50px;display:flex;justify-content:space-between;
+align-items:center;box-shadow:0 4px 20px rgba(0,0,0,.08);z-index:1000
+}
+nav .right{display:flex;gap:14px;align-items:center}
+nav a{text-decoration:none;color:#333;font-weight:500}
+.call-btn{
+background:var(--secondary);color:#fff;padding:8px 18px;
+border-radius:25px;display:flex;gap:6px;transition:.3s
+}
+.call-btn:hover{transform:translateY(-2px);box-shadow:0 8px 18px rgba(0,0,0,.25)}
+.lang-btn{border:1px solid var(--primary);border-radius:20px;padding:6px 14px;cursor:pointer;background:#fff}
+
+/* HERO */
+.hero{
+margin-top:80px;padding:100px 10%;
+background:linear-gradient(120deg,var(--primary),var(--secondary));
+color:#fff;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap
+}
+.hero-text{
+max-width:520px;
+display:flex;
+flex-direction:column;
+justify-content:center;
+gap:12px;
+animation:slideLeft 1.1s ease
+}
+.hero-img{animation:slideRight 1.1s ease}
+.hero img{max-height:430px;border-radius:20px}
+
+@keyframes slideLeft{from{opacity:0;transform:translateX(-120px)}to{opacity:1}}
+@keyframes slideRight{from{opacity:0;transform:translateX(120px)}to{opacity:1}}
+
+/* SPECIALTIES */
+#specialties{padding:90px 70px;background:#f7fbff;text-align:center}
+.specialty-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;margin-top:40px}
+.specialty-card{
+background:#fff;padding:35px 25px;border-radius:18px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);transition:.35s
+}
+.specialty-card:hover{transform:translateY(-10px);box-shadow:0 25px 45px rgba(0,0,0,.15)}
+.specialty-card i{font-size:38px;color:var(--secondary)}
+
+/* PROFILE */
+#about{padding:90px 0;background:#f4f8fb}
+.profile-wrap{
+max-width:1100px;margin:auto;
+background:linear-gradient(120deg,var(--primary),var(--secondary));
+border-radius:22px;padding:60px;color:#fff
+}
+.profile-grid{
+display:grid;
+grid-template-columns:1.3fr 1fr;
+gap:40px;
+align-items:center;
+margin-top:30px
+}
+.profile-card{
+background:#fff;color:#000;padding:30px;border-radius:18px;
+transition:.35s;text-align:center
+}
+.profile-card:hover{transform:translateY(-6px);box-shadow:0 15px 35px rgba(0,0,0,.25)}
+
+/* VIDEO */
+#videos{padding:80px 70px;text-align:center}
+.video-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px}
+.video-card{
+border-radius:16px;overflow:hidden;
+box-shadow:0 8px 20px rgba(0,0,0,.12);transition:.35s
+}
+.video-card:hover{transform:translateY(-8px);box-shadow:0 20px 40px rgba(0,0,0,.25)}
+.video-card iframe{width:100%;height:200px;border:0}
+.video-btn{
+margin-top:35px;display:inline-block;padding:12px 26px;
+border-radius:30px;background:var(--secondary);color:#fff;
+text-decoration:none
+}
+
+/* CHAMBER */
+.extra-wrap{
+padding:90px 70px;display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px
+}
+.extra-card{
+padding:35px;border-radius:18px;
+box-shadow:0 10px 30px rgba(0,0,0,.1);text-align:center;transition:.35s
+}
+.extra-card:hover{transform:translateY(-8px)}
+.call-box{
+background:linear-gradient(120deg,var(--primary),var(--secondary));
+color:#fff;display:flex;flex-direction:column;gap:18px;align-items:center
+}
+.phone-pill{
+background:#fff;color:var(--secondary);
+padding:12px 26px;border-radius:30px;font-weight:600;
+text-decoration:none;transition:.3s
+}
+.phone-pill:hover{transform:translateY(-3px);box-shadow:0 8px 18px rgba(0,0,0,.25)}
+
+/* LOCATION */
+#location{padding:80px 70px;text-align:center}
+.map iframe{width:100%;height:320px;border-radius:18px;border:0}
+
+/* FOOTER */
+footer{background:var(--primary);color:#fff;text-align:center;padding:35px}
+.socials{display:flex;justify-content:center;gap:15px;margin-top:15px}
+.socials a{
+width:42px;height:42px;border-radius:50%;
+background:#fff;display:flex;align-items:center;justify-content:center;
+color:var(--primary)
+}
+
+/* WHATSAPP */
+.whatsapp{
+position:fixed;bottom:22px;right:22px;width:60px;height:60px;
+background:#25D366;color:#fff;border-radius:50%;
+display:flex;align-items:center;justify-content:center;font-size:28px;z-index:999
+}
+
+@media(max-width:768px){
+nav{padding:14px 20px}
+.specialty-grid{grid-template-columns:1fr}
+.profile-grid{grid-template-columns:1fr}
+.hero,#specialties,#videos,.extra-wrap,#location{padding:80px 20px}
+}
+/* SLOGAN SPECIAL ANIMATION */
+.slogan{
+font-size:1.17rem;
+font-weight:500;
+opacity:0;
+animation:sloganFade 2.2s ease forwards, sloganGlow 4s ease-in-out infinite;
+animation-delay:.7s;
+}
+
+@keyframes sloganFade{
+from{
+opacity:0;
+transform:translateY(20px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+/* Enhanced brighter glow effect */
+@keyframes sloganGlow{
+0%,100%{
+text-shadow:0 0 2px rgba(255,255,255,0);
+}
+25%{
+text-shadow:0 0 20px rgba(255,255,255,0.7);
+}
+50%{
+text-shadow:0 0 40px rgba(255,255,255,1);
+}
+75%{
+text-shadow:0 0 20px rgba(255,255,255,0.7);
+}
+}
+.info-line{
+  text-align:left;
+  margin:10px 0;
+  line-height:1.6;
+}
+
+.label{
+  font-weight:600;
+}
+
+.degree-list{
+  list-style:disc;
+  padding-left:20px;
+  margin:15px 0 10px;
+  text-align:left;
+}
+
+.degree-list li{
+  margin:8px 0;
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+
+.degree-list i{
+  color:var(--secondary);
+  min-width:18px;
+}
+
+.bmdc-item{
+  margin-top:12px;
+  font-weight:500;
+  text-align:left;
+}
+/* ===== MOBILE NAVBAR ===== */
+.nav-toggle{
+  display:none;
+  font-size:24px;
+  cursor:pointer;
+  color:var(--primary);
+}
+
+/* Mobile styles */
+@media (max-width:768px){
+
+  .nav-toggle{
+    display:block;
+  }
+
+  nav{
+    flex-wrap:wrap;
+  }
+
+  #navMenu{
+    display:none;
+    flex-direction:column;
+    width:100%;
+    background:#fff;
+    margin-top:10px;
+    padding:10px 0;
+    box-shadow:0 8px 20px rgba(0,0,0,0.1);
+  }
+
+  #navMenu a,
+  #navMenu .call-btn,
+  #navMenu .lang-btn{
+    width:90%;
+    margin:6px auto;
+    text-align:center;
+    justify-content:center;
+  }
+
+  #navMenu.show{
+    display:flex;
+  }
+}
+
+
+</style>
+</head>
+
+<body>
+
+<nav>
+  <strong data-en="Dr. Shahriar Islam" data-bn="ডা. শাহরিয়ার ইসলাম">
+    Dr. Shahriar Islam
+  </strong>
+
+  <!-- Mobile hamburger -->
+  <div class="nav-toggle" id="navToggle">
+    <i class="fa fa-bars"></i>
+  </div>
+
+  <div class="right" id="navMenu">
+    <a href="#home" data-en="Home" data-bn="হোম">Home</a>
+    <a href="#specialties" data-en="Expertise" data-bn="দক্ষতা">Expertise</a>
+    <a href="#about" data-en="Profile" data-bn="প্রোফাইল">Profile</a>
+    <a href="tel:+8801521503987" class="call-btn">
+      <i class="fa fa-phone"></i> Call
+    </a>
+    <button class="lang-btn" id="langToggle">বাংলা</button>
+  </div>
+</nav>
+
+
+<section class="hero" id="home">
+<div class="hero-text">
+<h1 data-en="Dr. Shahriar Islam" data-bn="ডা. শাহরিয়ার ইসলাম">Dr. Shahriar Islam</h1>
+<p data-en="Medicine expertise" data-bn="মেডিসিনে অভিজ্ঞ">Experienced in Medicine</p>
+<p class="slogan"
+   data-en="Healthy living, healthier communities 🩺"
+   data-bn="সুস্থ থাকি, সুস্থ রাখি 🩺">
+Healthy living, healthier communities 🩺
+</p>
+</div>
+<div class="hero-img">
+<img src="./images/photo1.png">
+</div>
+</section>
+
+<section id="specialties">
+  <h2 data-en="Experienced in Medicine" data-bn="মেডিসিনে অভিজ্ঞ">Experienced in Medicine</h2>
+  <div class="specialty-grid">
+    <div class="specialty-card">
+      <i class="fa fa-droplet"></i>
+      <h3 data-en="Diabetes" data-bn="ডায়াবেটিস">Diabetes</h3>
+    </div>
+    <div class="specialty-card">
+      <i class="fa fa-heart-pulse"></i>
+      <h3 data-en="High Blood Pressure" data-bn="উচ্চ রক্তচাপ">High Blood Pressure</h3>
+    </div>
+    <div class="specialty-card">
+      <i class="fa fa-user"></i>
+      <h3 data-en="Skin" data-bn="ত্বক">Skin</h3>
+    </div>
+    <div class="specialty-card">
+      <i class="fa fa-lungs"></i>
+      <h3 data-en="Respiratory" data-bn="শ্বাসকষ্ট">Respiratory</h3>
+    </div>
+    <div class="specialty-card">
+      <i class="fa fa-bone"></i>
+      <h3 data-en="Arthritis" data-bn="বাতব্যাথা">Arthritis</h3>
+    </div>
+    <div class="specialty-card">
+      <i class="fa fa-child"></i>
+      <h3 data-en="Pediatrics" data-bn="শিশুরোগ">Pediatrics</h3>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+<div class="profile-wrap">
+<h2 data-en="Professional Profile" data-bn="পেশাগত প্রোফাইল">Professional Profile</h2>
+<div class="profile-grid">
+<div data-en="Our goal is to ensure long-term well-being through ethical and evidence-based medical care."
+data-bn="নৈতিক ও প্রমাণভিত্তিক চিকিৎসা সেবার মাধ্যমে দীর্ঘমেয়াদী সুস্থতা নিশ্চিত করাই আমাদের লক্ষ্য।">
+Ethical & evidence-based medical care focused on long-term patient wellbeing.
+</div>
+<div class="profile-card">
+
+  <!-- Title -->
+  <div class="bmdc-title">
+    <strong>
+      <span data-en="Professional Credentials" data-bn="পেশাগত যোগ্যতা">
+        Professional Credentials
+      </span>
+    </strong>
+  </div>
+
+  <!-- Degree & Registration List -->
+  <div class="credential-list"
+       data-en="
+         <ul class='degree-list'>
+           <li><i class='fa fa-user-graduate'></i> MBBS</li>
+           <li><i class='fa fa-hospital'></i> CCD (BIRDEM)</li>
+           <li><i class='fa fa-stethoscope'></i> DOC</li>
+           <li><i class='fa fa-notes-medical'></i> CMU</li>
+         </ul>
+         <div class='bmdc-item'>BMDC Registration: A-135384</div>
+       "
+       data-bn="
+         <ul class='degree-list'>
+           <li><i class='fa fa-user-graduate'></i> এমবিবিএস</li>
+           <li><i class='fa fa-hospital'></i> সিসিডি (বারডেম)</li>
+           <li><i class='fa fa-stethoscope'></i> ডিওসি</li>
+           <li><i class='fa fa-notes-medical'></i> সিএমইউ</li>
+         </ul>
+         <div class='bmdc-item'>বিএমডিসি নিবন্ধন: A-135384</div>
+       ">
+  </div>
+
+</div>
+
+
+</div>
+</div>
+</section>
+
+<section id="videos">
+<h2 data-en="Video Gallery" data-bn="ভিডিও গ্যালারি">Video Gallery</h2>
+<div class="video-grid">
+<div class="video-card"><iframe src="https://www.youtube.com/embed/VIDEO_ID"></iframe></div>
+<div class="video-card"><iframe src="https://www.youtube.com/embed/VIDEO_ID"></iframe></div>
+</div>
+<a href="https://www.youtube.com/" target="_blank" class="video-btn"
+data-en="See more videos" data-bn="আরও ভিডিও দেখুন">See more videos</a>
+</section>
+
+<section class="extra-wrap">
+<div class="extra-card">
+<h3 data-en="Chamber & Schedule" data-bn="চেম্বার ও সময়সূচী">Chamber & Schedule</h3>
+<p class="info-line"
+   data-en="<span class='label'>Location:</span> Shamoly Cinema Hall Building Complex, Ring Rd, Dhaka 1207, MiCare Health Limited"
+   data-bn="<span class='label'>অবস্থান:</span> শ্যামলী সিনেমা হল বিল্ডিং কমপ্লেক্স, রিং রোড, ঢাকা ১২০৭, মাইকেয়ার হেলথ লিমিটেড">
+</p>
+
+<p class="info-line"
+   data-en="<span class='label'>Time:</span> Sunday 8 AM – Monday 8 AM"
+   data-bn="<span class='label'>সময়:</span> রবিবার সকাল ৮টা – সোমবার সকাল ৮টা">
+</p>
+
+</div>
+
+<div class="extra-card call-box">
+  <i class="fa fa-phone"></i>
+  <h3 data-en="Call for Appointment" data-bn="অ্যাপয়েন্টমেন্টের জন্য কল করুন">Call for Appointment</h3>
+  <a href="tel:+8801521503987" 
+     class="phone-pill" 
+     data-en="+880 1521-503987" 
+     data-bn="+৮৮০ ১৫২১-৫০৩৯৮৭">
+     +880 1521-503987
+  </a>
+</div>
+
+</section>
+
+<section id="location">
+<h2 data-en="Location" data-bn="অবস্থান">Location</h2>
+<div class="map">
+<iframe src="https://www.google.com/maps?q=Mi+Care+Hospital,+Shyamoli,+Dhaka&output=embed"></iframe>
+</div>
+</section>
+
+<footer>
+© 2026 Dr. Shahriar Islam || drshahriar03@gmail.com
+
+<div class="socials">
+  <a href="https://www.facebook.com/share/1Bpcnzh54x/" target="_blank">
+    <i class="fab fa-facebook-f"></i>
+  </a>
+  <a href="https://www.instagram.com/shahriar.10" target="_blank">
+    <i class="fab fa-instagram"></i>
+  </a>
+  <a href="https://mail.google.com/mail/?view=cm&fs=1&to=drshahriar03@gmail.com" target="_blank">
+    <i class="fa fa-envelope"></i>
+  </a>
+</div>
+
+
+</footer>
+
+<a href="https://wa.me/8801521503987" class="whatsapp" target="_blank">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+
+<script>
+let bn = false;
+
+function applyLanguage(){
+  document.querySelectorAll("[data-en]").forEach(el=>{
+    el.innerHTML = bn ? el.dataset.bn : el.dataset.en;
+  });
+  document.getElementById("langToggle").innerText = bn ? "EN" : "বাংলা";
+}
+
+// button click
+document.getElementById("langToggle").onclick = function(){
+  bn = !bn;
+  applyLanguage();
+};
+
+// INITIAL LOAD (this fixes the blank issue)
+document.addEventListener("DOMContentLoaded", applyLanguage);
+</script>
+
+
+
+</body>
+</html>

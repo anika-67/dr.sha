@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Dr. Shahriar Islam | Medicine Specialist | Bangladesh</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<meta name="description" content="Dr. Shahriar Islam, MBBS (STAMC), CCD (BIRDEM), DOC (Derma), CMU (Ultrasound), BMDC registered physician providing ethical and evidence-based medical care in Bangladesh.">
+
+<!-- Font Awesome for Social Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+:root {
+  --primary: #0b3c5d;
+  --secondary: #1d84b5;
+  --accent: #e8f1f5;
+  --dark: #1a1a1a;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  color: var(--dark);
+  background: #ffffff;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+/* NAVBAR */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(255,255,255,0.95);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 60px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  z-index: 1000;
+}
+
+nav .logo {
+  font-weight: 700;
+  color: var(--primary);
+  font-size: 1.2rem;
+}
+
+nav .nav-links {
+  display: flex;
+  align-items: center;
+}
+
+nav .nav-links a {
+  margin-left: 25px;
+  text-decoration: none;
+  color: var(--dark);
+  font-weight: 500;
+}
+
+nav .nav-links a:hover {
+  color: var(--secondary);
+}
+
+.lang-btn {
+  margin-left: 15px;
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: 1px solid var(--primary);
+  background: transparent;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.call-btn {
+  margin-left: 15px;
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: 1px solid var(--secondary);
+  background: var(--secondary);
+  color: white;
+  cursor: pointer;
+  font-weight: 500;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.call-btn i {
+  margin-right: 5px;
+}
+
+/* HERO */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 100px 10%;
+  background: linear-gradient(120deg, var(--primary), var(--secondary));
+  color: white;
+  flex-wrap: wrap;
+  margin-top: 70px;
+}
+
+.hero-content {
+  flex: 1 1 500px;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+.hero-photo {
+  flex: 1 1 400px;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-photo img {
+  max-width: 100%;
+  max-height: 450px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* SECTIONS */
+section {
+  padding: 100px 80px;
+}
+
+section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  color: var(--primary);
+}
+
+/* ABOUT */
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.about-box {
+  background: var(--accent);
+  padding: 40px;
+  border-radius: 20px;
+}
+
+/* SERVICES */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+.card {
+  padding: 30px;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+.card h3 {
+  margin-top: 0;
+  color: var(--secondary);
+}
+
+/* FOOTER */
+footer {
+  background: var(--primary);
+  color: white;
+  text-align: center;
+  padding: 30px;
+}
+
+.social-buttons {
+  margin-top: 15px;
+}
+
+.social-buttons a {
+  display: inline-block;
+  margin: 0 8px;
+  text-decoration: none;
+  color: white;
+  font-size: 1.4rem;
+  padding: 10px;
+  border-radius: 50%;
+  background: var(--secondary);
+  transition: transform 0.3s ease;
+}
+
+.social-buttons a:hover {
+  transform: scale(1.2);
+}
+
+/* BACK TO TOP BUTTON */
+#back-to-top {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background: var(--secondary);
+  color: white;
+  border: none;
+  padding: 12px 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.4rem;
+  display: none;
+  z-index: 100;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  nav {
+    padding: 15px 25px;
+  }
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 80px 20px;
+  }
+  .hero-photo {
+    margin-top: 30px;
+  }
+  section {
+    padding: 80px 20px;
+  }
+  .about {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+  <div class="logo">Dr. Shahriar Islam</div>
+  <div class="nav-links">
+    <a href="#home" class="nav-text">Home</a>
+    <a href="#services" class="nav-text">Expertise</a>
+    <a href="#about" class="nav-text">Profile</a>
+    <!-- Call button -->
+    <a href="tel:+8801XXXXXXXXX" class="call-btn"><i class="fas fa-phone"></i>Call</a>
+    <button class="lang-btn" onclick="toggleLang()">বাংলা</button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-content">
+    <h1 class="lang-en">Dr. Shahriar Islam</h1>
+    <h1 class="lang-bn" style="display:none;">ডা. শাহরিয়ার ইসলাম</h1>
+
+    <p class="lang-en"><strong>Healthy Living, Healthier Communities 🩺</strong></p>
+    <p class="lang-bn" style="display:none;"><strong>সুস্থ থাকি, সুস্থ রাখি 🩺</strong></p>
+
+    <p class="lang-en">MBBS (STAMC) | CCD (BIRDEM) | DOC (Derma) | CMU (Ultrasound)</p>
+    <p class="lang-bn" style="display:none;">এমবিবিএস (STAMC) | CCD (BIRDEM) | DOC (Dermatology) | CMU (Ultrasound)</p>
+  </div>
+
+  <div class="hero-photo">
+    <img src="./images/photo1.png" alt="Dr. Shahriar Islam">
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <h2 class="lang-en">Professional Profile</h2>
+  <h2 class="lang-bn" style="display:none;">পেশাগত প্রোফাইল</h2>
+
+  <div class="about">
+    <div>
+      <p class="lang-en">With training aligned to international clinical standards, I focus on accuracy, ethics, and continuity of care.</p>
+      <p class="lang-bn" style="display:none;">আন্তর্জাতিক ক্লিনিকাল স্ট্যান্ডার্ড অনুযায়ী প্রশিক্ষণপ্রাপ্ত, আমি নির্ভুলতা, নৈতিকতা এবং পরিচর্যার ধারাবাহিকতার ওপর মনোযোগ দিই।</p>
+
+      <p class="lang-en">Experience across tertiary hospitals and outpatient clinical settings.</p>
+      <p class="lang-bn" style="display:none;">তৃতীয় স্তরের হাসপাতাল এবং আউটপেশেন্ট ক্লিনিকাল সেটিংসে অভিজ্ঞতা।</p>
+    </div>
+    <div class="about-box">
+      <h3 class="lang-en">Professional Credentials</h3>
+      <h3 class="lang-bn" style="display:none;">পেশাগত যোগ্যতা</h3>
+
+      <p class="lang-en"><strong>BMDC Registration:</strong> A-XXXXX</p>
+      <p class="lang-bn" style="display:none;"><strong>BMDC রেজিস্ট্রেশন:</strong> A-XXXXX</p>
+
+      <p class="lang-en"><strong>FCPS (Medicine):</strong> BCPS</p>
+      <p class="lang-bn" style="display:none;"><strong>FCPS (Medicine):</strong> BCPS</p>
+
+      <p class="lang-en"><strong>Medical Degree:</strong> MBBS</p>
+      <p class="lang-bn" style="display:none;"><strong>মেডিকেল ডিগ্রি:</strong> MBBS</p>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <h2 class="lang-en">Clinical Expertise</h2>
+  <h2 class="lang-bn" style="display:none;">ক্লিনিকাল বিশেষজ্ঞতা</h2>
+
+  <div class="grid">
+    <div class="card"><h3 class="lang-en">Medicine</h3><h3 class="lang-bn" style="display:none;">মেডিসিন</h3><p class="lang-en">Accurate diagnosis and chronic care.</p><p class="lang-bn" style="display:none;">সঠিক নির্ণয় এবং দীর্ঘমেয়াদী যত্ন।</p></div>
+    <div class="card"><h3 class="lang-en">Diabetes</h3><h3 class="lang-bn" style="display:none;">ডায়াবেটিস</h3><p class="lang-en">Comprehensive diabetes management.</p><p class="lang-bn" style="display:none;">সম্পূর্ণ ডায়াবেটিস পরিচালনা।</p></div>
+    <div class="card"><h3 class="lang-en">Dermatology</h3><h3 class="lang-bn" style="display:none;">ডার্মাটোলজি</h3><p class="lang-en">Medical & cosmetic dermatology.</p><p class="lang-bn" style="display:none;">মেডিকেল এবং কসমেটিক ডার্মাটোলজি।</p></div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="contact">
+  <p class="lang-en">Contact: +8801XXXXXXXXX | yourname@email.com</p>
+  <p class="lang-bn" style="display:none;">যোগাযোগ: +8801XXXXXXXXX | yourname@email.com</p>
+
+  <!-- Social / App buttons -->
+  <div class="social-buttons">
+    <a href="https://wa.me/8801XXXXXXXXX" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+    <a href="https://www.facebook.com/yourpage" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://www.instagram.com/yourpage" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+    <a href="mailto:yourname@email.com" title="Email"><i class="fas fa-envelope"></i></a>
+  </div>
+
+  <p>© 2026 Dr. Shahriar Islam</p>
+</footer>
+
+<!-- BACK TO TOP BUTTON -->
+<button id="back-to-top" title="Back to top"><i class="fas fa-arrow-up"></i></button>
+
+<script>
+let currentLang = "en";
+function toggleLang() {
+  currentLang = currentLang === "en" ? "bn" : "en";
+  document.documentElement.lang = currentLang;
+  document.querySelectorAll(".lang-en").forEach(el => el.style.display = currentLang === "en" ? "block" : "none");
+  document.querySelectorAll(".lang-bn").forEach(el => el.style.display = currentLang === "bn" ? "block" : "none");
+  document.querySelector(".lang-btn").innerText = currentLang === "en" ? "বাংলা" : "EN";
+}
+
+// Back to top button
+const backToTop = document.getElementById("back-to-top");
+window.onscroll = () => {
+  backToTop.style.display = (document.documentElement.scrollTop > 300) ? "block" : "none";
+};
+backToTop.onclick = () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+};
+</script>
+
+</body>
+</html>
